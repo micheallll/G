@@ -18,7 +18,6 @@ void output(int a[9][9])//Êä³öº¯Êı
 				cout << " ";
 		}
 	}
-	cout << endl;
 }
 
 int main()
@@ -112,6 +111,8 @@ int main()
 		{
 			break;
 		}
+		else
+			cout << endl;
 	}
 	return 0;
 }
