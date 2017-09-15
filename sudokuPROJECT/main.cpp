@@ -20,12 +20,18 @@ void output(int a[9][9])//输出函数
 	}
 }
 
-int main()
+int main(int argc, char *argv[])
 {
-	freopen("out.txt", "w", stdout);
+	
 	srand((unsigned)time(NULL));
 	int N, a = 0, i = 1, j, k, l, m = 1, tmp, x, y;
-	cin >> N;
+	if (sscanf(argv[2], "%d", &N) == 0 || N<0)
+	{
+		cout << "请输入一个正整数!" << endl;
+		return 0;
+	}
+	freopen("sudoku.txt", "w", stdout);
+
 	int sudo[9][9] = { 1,2,3,4,5,6,7,8,9,
 		4,5,6,7,8,9,1,2,3,
 		7,8,9,1,2,3,4,5,6,
